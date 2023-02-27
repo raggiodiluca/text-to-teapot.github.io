@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+@import url(//db.onlinewebfonts.com/c/4cac62b9f31046456d6fa8a29b0d9462?family=Sitka+Small);
+@import url(//db.onlinewebfonts.com/c/ecf2edb722bb790456a7199f4b4cfef8?family=Sitka+Heading);
+@import url(//db.onlinewebfonts.com/c/9eb5b7e8afb18f98b00594b9e758b378?family=Sitka+Display);
+@import url(//db.onlinewebfonts.com/c/7a8bc7c29b5bcadb9510cca51210ac46?family=Sitka+Banner);
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-family: 'Sitka Text';
+}
+
+h1 {
+  font-family: 'Sitka Heading';
+  font-weight: 400;
+}
+
+p {
+  font-family: 'Sitka Small', sans-serif;
+  font-weight: 400;
+}
+
+#side-container {
+  width: 27%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#top-title {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+}
+
+#nav-bar {
+  width: 100%;
+  flex-grow: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #999;
+}
+
+.nav-click {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  background-color: #fff;
+}
+
+#text-container {
+  flex-grow: 1;
+  padding: 20px;
+}
