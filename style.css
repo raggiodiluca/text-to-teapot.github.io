@@ -5,30 +5,24 @@
   box-sizing: border-box;
 }
 
-@import url(//db.onlinewebfonts.com/c/4cac62b9f31046456d6fa8a29b0d9462?family=Sitka+Small);
-@import url(//db.onlinewebfonts.com/c/ecf2edb722bb790456a7199f4b4cfef8?family=Sitka+Heading);
-@import url(//db.onlinewebfonts.com/c/9eb5b7e8afb18f98b00594b9e758b378?family=Sitka+Display);
-@import url(//db.onlinewebfonts.com/c/7a8bc7c29b5bcadb9510cca51210ac46?family=Sitka+Banner);
+:root {
+  --black: #353740;
+  --green: #D2F4D3;
+  --gray: #F7F7F8;
+  /*lighter gray #F7F7F8, darker gray #E9E9EE*/
+}
 
 @font-face {
-  font-family: "Sitka Small";
-  src: url("//db.onlinewebfonts.com/t/4cac62b9f31046456d6fa8a29b0d9462.eot");
-  src: url("//db.onlinewebfonts.com/t/4cac62b9f31046456d6fa8a29b0d9462.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/4cac62b9f31046456d6fa8a29b0d9462.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/4cac62b9f31046456d6fa8a29b0d9462.woff") format("woff"), url("//db.onlinewebfonts.com/t/4cac62b9f31046456d6fa8a29b0d9462.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/4cac62b9f31046456d6fa8a29b0d9462.svg#Sitka Small") format("svg");
+  font-family: 'Sitka Small';
+  src: url("fonts/SitkaSmall.ttf") format('truetype'),
 }
 @font-face {
-  font-family: "Sitka Heading";
-  src: url("//db.onlinewebfonts.com/t/ecf2edb722bb790456a7199f4b4cfef8.eot");
-  src: url("//db.onlinewebfonts.com/t/ecf2edb722bb790456a7199f4b4cfef8.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ecf2edb722bb790456a7199f4b4cfef8.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ecf2edb722bb790456a7199f4b4cfef8.woff") format("woff"), url("//db.onlinewebfonts.com/t/ecf2edb722bb790456a7199f4b4cfef8.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ecf2edb722bb790456a7199f4b4cfef8.svg#Sitka Heading") format("svg");
+  font-family: 'Sitka Text';
+  src: url("fonts/SitkaText.ttf") format('truetype'),
 }
 @font-face {
-  font-family: "Sitka Display";
-  src: url("//db.onlinewebfonts.com/t/9eb5b7e8afb18f98b00594b9e758b378.eot");
-  src: url("//db.onlinewebfonts.com/t/9eb5b7e8afb18f98b00594b9e758b378.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9eb5b7e8afb18f98b00594b9e758b378.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9eb5b7e8afb18f98b00594b9e758b378.woff") format("woff"), url("//db.onlinewebfonts.com/t/9eb5b7e8afb18f98b00594b9e758b378.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9eb5b7e8afb18f98b00594b9e758b378.svg#Sitka Display") format("svg");
-}
-@font-face {
-  font-family: "Sitka Banner";
-  src: url("//db.onlinewebfonts.com/t/7a8bc7c29b5bcadb9510cca51210ac46.eot");
-  src: url("//db.onlinewebfonts.com/t/7a8bc7c29b5bcadb9510cca51210ac46.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/7a8bc7c29b5bcadb9510cca51210ac46.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/7a8bc7c29b5bcadb9510cca51210ac46.woff") format("woff"), url("//db.onlinewebfonts.com/t/7a8bc7c29b5bcadb9510cca51210ac46.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/7a8bc7c29b5bcadb9510cca51210ac46.svg#Sitka Banner") format("svg");
+  font-family: 'Sitka Heading';
+  src: url("fonts/SitkaHeading.ttf") format('truetype'),
 }
 
 body {
@@ -36,52 +30,106 @@ body {
   padding: 0;
   display: flex;
   font-family: 'Sitka Text';
+  color: var(--black);
 }
 
-h1 {
+
+.small {
   font-family: 'Sitka Small';
-  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.1em;
 }
 
-p {
-  font-family: 'Sitka Display';
-  font-size: 30pt;
+.mid {
+  font-family: 'Sitka Small';
+  font-size: 1.8em;
+  line-height: 1.7em;
+}
+
+.big {
+  font-family: 'Sitka Text';
+  font-size: 2.1em;
+  font-weight: 400;
+}
+
+.bigger {
+  font-family: 'Sitka Heading';
+  font-weight: normal;
+  font-size: 4em;
 }
 
 #side-container {
-  width: 27%;
+  width: 27vw;
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-grow: 2;
+  flex-flow: column;
+  padding: 2rem 2.5rem 2rem 2.5rem;
+  background-color: var(--gray);
+  border-right: 2px solid var(--black);
+  box-sizing: border-box;
 }
 
 #top-title {
   width: 100%;
-  flex-grow: 1;
   display: flex;
-  justify-content: center;
+  flex-flow: column;
   align-items: center;
-  background-color: #ccc;
+  /*border: 1px solid red;*/
+}
+
+#title {
+  width: 100%;
+  line-height: 1em;
+  padding: 0 1rem 1rem 1rem;
+  /*border: 1px solid red;*/
+}
+
+#subtitle {
+  padding: 0;
+  /*border: 1px solid red;*/
 }
 
 #nav-bar {
   width: 100%;
-  flex-grow: 0;
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-end;
-  background-color: #999;
+  flex-flow: column;
+  justify-content:center;
+  /*border: 1px solid red;*/
+  padding: 0 0 0 1rem;
+}
+
+#extras-bar {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  /*border: 1px solid red;*/
+  padding: 0 0 0 1rem;
 }
 
 .nav-click {
-  width: 30px;
-  height: 30px;
-  margin: 10px;
-  background-color: #fff;
+  width: fit-content;
+  display: flex;
+  padding-top: 0.08em;
+  margin-top: 0.35em;
+  line-height: 1em;
 }
 
-#text-container {
-  flex-grow: 1;
-  padding: 20px;
+.chap-click{
+  background-color: var(--green);
+  mix-blend-mode: multiply;
+}
+
+.text-container {
+  width: 73vw;
+  flex-grow: 0;
+  padding:0 15vw 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  background-color: var(--green);
+  mix-blend-mode: multiply;
 }
