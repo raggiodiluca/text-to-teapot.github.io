@@ -33,6 +33,10 @@ body {
   color: var(--black);
 }
 
+a {
+  text-decoration: none;
+  color: var(--black);
+}
 
 .small {
   font-family: 'Sitka Small';
@@ -42,13 +46,13 @@ body {
 
 .mid {
   font-family: 'Sitka Small';
-  font-size: 1.8em;
+  font-size: 1.6em;
   line-height: 1.7em;
 }
 
 .big {
   font-family: 'Sitka Text';
-  font-size: 2.1em;
+  font-size: 2em;
   font-weight: 400;
 }
 
@@ -94,7 +98,7 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   justify-content:center;
   /*border: 1px solid red;*/
   padding: 0 0 0 1rem;
@@ -115,6 +119,8 @@ body {
   padding-top: 0.08em;
   margin-top: 0.35em;
   line-height: 1em;
+  user-select: none;
+  cursor: pointer;
 }
 
 .chap-click{
@@ -122,14 +128,99 @@ body {
   mix-blend-mode: multiply;
 }
 
-.text-container {
-  width: 73vw;
-  flex-grow: 0;
-  padding:0 15vw 0 1rem;
+.nav-click-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
-a {
+.sublinks-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-click.active + .sublinks-container {
+  max-height: 100px; /* Adjust to desired height */
+}
+
+.sublink {
+  width: fit-content;
+  padding-top: 0.2em;
+}
+
+.sublink:first-child {
+  margin-top: 0.3em;
+}
+
+.text-container {
+  flex-grow: 0;
+  width: 73vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;;
+}
+
+.text-container a {
   text-decoration: none;
   background-color: var(--green);
   mix-blend-mode: multiply;
+  cursor: pointer;
+}
+
+.month-container {
+  position: absolute;
+  height: 100vh;
+  padding:0 8vw 0 1rem;
+  overflow: scroll;
+  scrollbar-width: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.month-container.active {
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.month-container::-webkit-scrollbar {
+  display: none;
+}
+
+.month-title {
+  display: none;
+}
+
+/* .note-holder {
+  margin-left: auto;
+} */
+
+.month-container:nth-child(1) > .note-holder:nth-child(odd) {
+  padding-left: 3rem;
+}
+
+.month-container:nth-child(2) > .note-holder:nth-child(even) {
+  padding-left: 3rem;
+}
+
+.note-title {
+margin-top: .8em;
+}
+
+.note-text{
+padding: .8em 0em .8em 0em;
+}
+
+.gpt{
+  padding: .6em 0em .8em 3rem;
+  font-family: monospace;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
 }
