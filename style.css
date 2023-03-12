@@ -198,15 +198,9 @@ a {
   display: none;
 }
 
-/* .note-holder {
-  margin-left: auto;
-} */
+/* alternating layout */
 
-.text-container:nth-child(1) > .note-holder:nth-child(odd) {
-  padding-left: 3rem;
-}
-
-.text-container:nth-child(2) > .note-holder:nth-child(even) {
+.note-holder:nth-child(odd) {
   padding-left: 3rem;
 }
 
