@@ -16,10 +16,12 @@
   font-family: 'Sitka Small';
   src: url("fonts/SitkaSmall.ttf") format('truetype'),
 }
+
 @font-face {
   font-family: 'Sitka Text';
   src: url("fonts/SitkaText.ttf") format('truetype'),
 }
+
 @font-face {
   font-family: 'Sitka Heading';
   src: url("fonts/SitkaHeading.ttf") format('truetype'),
@@ -99,7 +101,7 @@ a {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   /*border: 1px solid red;*/
   padding: 0 0 0 1rem;
 }
@@ -123,7 +125,7 @@ a {
   cursor: pointer;
 }
 
-.chap-click{
+.chap-click {
   background-color: var(--green);
   mix-blend-mode: multiply;
 }
@@ -141,8 +143,9 @@ a {
   flex-direction: column;
 }
 
-.nav-click.active + .sublinks-container {
-  max-height: 100px; /* Adjust to desired height */
+.nav-click.active+.sublinks-container {
+  max-height: 100px;
+  /* Adjust to desired height */
 }
 
 .sublink {
@@ -159,7 +162,7 @@ a {
   width: 73vw;
   display: flex;
   flex-direction: column;
-  position: relative;;
+  position: relative;
 }
 
 #right-container a {
@@ -172,9 +175,10 @@ a {
 .text-container {
   position: absolute;
   height: 100vh;
-  padding:0 8vw 0 1rem;
+  padding: 0 8vw 0 1rem;
   overflow: scroll;
   scrollbar-width: none;
+  background-color: white;
   top: 0;
   left: 0;
   right: 0;
@@ -205,16 +209,65 @@ a {
 }
 
 .note-title {
-margin-top: .8em;
+  margin-top: .8em;
 }
 
-.note-text{
-padding: .8em 0em .8em 0em;
+.note-text {
+  padding: .8em 0em .8em 0em;
 }
 
-.gpt{
+.gpt {
   padding: .6em 0em .8em 3rem;
   font-family: monospace;
   font-size: 1.6rem;
   line-height: 2.1rem;
+}
+
+
+.text-container a img {
+  display: none;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 99;
+  border: 2px solid var(--black); 
+  background-color: var(--gray);
+  font-size: 1rem;
+  line-height: 1.1rem;
+  min-height: 2rem;
+  max-width: 30rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  position: absolute;
+  
+}
+
+.tooltip .tooltip-image {
+  display: flex;
+}
+.tooltip img {
+  display: block;
+  width: 100%;
+}
+
+.tooltip .text {
+  padding: 0.5rem;
+}
+
+.tooltip.bottom {
+  top: 100%;
+}
+
+.tooltip.left {
+  right: auto;
+}
+
+.tooltip.right {
+  left: auto;
 }
