@@ -1,15 +1,15 @@
 $(document).ready(function () {
   $('.nav-click').on('click', function () {
-    // get the month data attribute
-    const month = $(this).data('month');
-    // check that the clicked month is not the current active
-    if (!$(`.month-container[data-month=${month}]`).hasClass('active')) {
+    // get the text data attribute
+    const text = $(this).data('text');
+    // check that the clicked text is not the current active
+    if (!$(`.text-container[data-text=${text}]`).hasClass('active')) {
       //reset all scrolls
-      $(`.month-container[data-month=${month}]`).scrollTop(0);
-      // hide all month containers
-      $('.month-container').removeClass('active');
-      // show the selected month container
-      $(`.month-container[data-month=${month}]`).addClass('active');
+      $(`.text-container[data-text=${text}]`).scrollTop(0);
+      // hide all text containers
+      $('.text-container').removeClass('active');
+      // show the selected text container
+      $(`.text-container[data-text=${text}]`).addClass('active');
     }
   });
 
@@ -28,13 +28,13 @@ $(document).ready(function () {
   $('.sublink').on('click', function () {
     // get the corresponding note number from the sublink's text
     var noteNumber = $(this).text().replace(/\[|\]/g, '');
-    // find the active month container
-    var activeMonth = $('.month-container.active');
+    // find the active text container
+    var activeText = $('.text-container.active');
     // scroll to the corresponding note title
-    activeMonth.animate({
-      scrollTop: $('#' + 'note-' + noteNumber).offset().top - activeMonth.offset().top + activeMonth.scrollTop() - 16
+    activeText.animate({
+      scrollTop: activeText.find('[data-note-number="' + noteNumber + '"]').offset().top - activeText.offset().top + activeText.scrollTop() - 16
     }, 500);
-  });
+});
 
 
 
