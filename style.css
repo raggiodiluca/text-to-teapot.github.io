@@ -245,6 +245,7 @@ a {
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
   position: absolute;
+  pointer-events: none;
   
 }
 

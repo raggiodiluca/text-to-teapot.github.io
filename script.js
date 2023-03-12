@@ -39,7 +39,18 @@ $(document).ready(function () {
       scrollTop: activeText.find('[data-note-number="' + noteNumber + '"]').offset().top - activeText.offset().top + activeText.scrollTop() - 16
     }, 500);
   });
+});
 
+$(document).ready(function () {
+
+  var imageCache = []; // array to store cached images
+
+  $('.text-container a[data-tooltip*="img"]').each(function () {
+    var imgUrl = $(this).find('img').attr('src');
+    var img = new Image();
+    img.src = imgUrl;
+    imageCache.push(img);
+  });
 
   $('.text-container a').on('mouseenter', function (e) {
     // create the tooltip box
@@ -61,13 +72,13 @@ $(document).ready(function () {
       // add the tooltip to the page
       $('body').append(tooltip);
       // position the tooltip above the link
-      
+
       var linkOffset = $(this).offset();
       var linkWidth = $(this).outerWidth();
       var linkHeight = $(this).outerHeight();
       var tooltipWidth = tooltip.outerWidth();
       var tooltipHeight = tooltip.outerHeight();
-      var top = Math.max(linkOffset.top - tooltipHeight, 0); // make sure top is not less than 0
+      var top = Math.max(e.pageY - tooltipHeight, 0); // make sure top is not less than 0
       var left = e.pageX; // use mouse position for left coordinate
       if (left + tooltipWidth > $(window).width()) {
         left = $(window).width() - tooltipWidth;
@@ -87,11 +98,6 @@ $(document).ready(function () {
       $(this).remove();
     });
   });
-
-
-
-
-
 
 
 });
