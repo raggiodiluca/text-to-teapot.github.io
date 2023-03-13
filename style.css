@@ -13,30 +13,30 @@
 }
 
 @font-face {
-  font-family: 'Vera Mono';
-  src: url("fonts/VeraMono.ttf") format('truetype'),
-}
-
-@font-face {
   font-family: 'Sitka Small';
-  src: url("fonts/SitkaSmall.ttf") format('truetype'),
+  src: url("fonts/SitkaSmall.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Sitka Text';
-  src: url("fonts/SitkaText.ttf") format('truetype'),
+  src: url("fonts/SitkaText.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Sitka Heading';
-  src: url("fonts/SitkaHeading.ttf") format('truetype'),
+  src: url("fonts/SitkaHeading.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
   margin: 0;
   padding: 0;
   display: flex;
-  font-family: 'Sitka Text';
   color: var(--black);
 }
 
@@ -45,11 +45,17 @@ a {
   color: var(--black);
 }
 
-.small {
+.small, body {
   font-family: 'Sitka Small';
-  font-size: 1em;
-  line-height: 1.1em;
-}
+  font-size: 1rem;
+  line-height: 1.2em;
+} 
+
+/* .small, body {
+  font-family: 'Lucida Console';
+  font-size: 1rem;
+  line-height: 1.2em;
+}  */
 
 .mid {
   font-family: 'Sitka Small';
@@ -60,6 +66,7 @@ a {
 .big {
   font-family: 'Sitka Text';
   font-size: 2rem;
+  line-height: normal;
   font-weight: 400;
 }
 
@@ -86,19 +93,18 @@ a {
   display: flex;
   flex-flow: column;
   align-items: center;
-  /*border: 1px solid red;*/
+  cursor: pointer;
 }
 
 #title {
   width: 100%;
   line-height: 1em;
   padding: 0 1rem 1rem 1rem;
-  /*border: 1px solid red;*/
+  
 }
 
 #subtitle {
   padding: 0;
-  /*border: 1px solid red;*/
 }
 
 #nav-bar {
@@ -107,7 +113,6 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*border: 1px solid red;*/
   padding: 0 0 0 1rem;
 }
 
@@ -116,7 +121,6 @@ a {
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
-  /*border: 1px solid red;*/
   padding: 0 0 0 1rem;
 }
 
@@ -219,6 +223,7 @@ a {
 .next-link {
   text-align: right;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 /* alternating layout */
@@ -236,10 +241,10 @@ a {
 }
 
 .gpt {
-  padding: .6em 0em .8em 3rem;
-  font-family: 'Vera Mono';
-  font-size: 1.6rem;
-  line-height: 2.1rem;
+  padding: 0.2em 0em 1.8em 3rem;
+  font-family: 'Lucida Console';
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 
 
