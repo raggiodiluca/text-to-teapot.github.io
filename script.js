@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('.nav-click').on('click', function () {
+  $('.nav-click, #top-title').on('click', function () {
     // get the text data attribute
     const text = $(this).data('text');
     // check that the clicked text is not the current active
@@ -13,18 +13,18 @@ $(document).ready(function () {
     }
   });
 
-  $('.nav-click').on('click', function () {
+  $('.nav-click, #top-title').on('click', function () {
     if (!$(this).hasClass('extras')) {
       var $sublinksContainer = $(this).parent().find('.sublinks-container');
       var sublinksContainerHeight = $sublinksContainer[0].scrollHeight;
     }
     if (!$(this).hasClass('active')) {
       // If this nav-click element is not active, close any other active nav-click elements and open this one
-      if (!$(this).hasClass('extras')) {
+      
         $('.nav-click.active').removeClass('active');
         $('.nav-click-wrapper .sublinks-container').css('max-height', 0);
         $sublinksContainer.css('max-height', sublinksContainerHeight + 'px');
-      }
+      
       $(this).addClass('active');
     }
   });
@@ -35,10 +35,49 @@ $(document).ready(function () {
     // find the active text container
     var activeText = $('.text-container.active');
     // scroll to the corresponding note title
-    activeText.animate({
-      scrollTop: activeText.find('[data-note-number="' + noteNumber + '"]').offset().top - activeText.offset().top + activeText.scrollTop() - 16
-    }, 500);
+    var rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+var scrollTopOffset = 2 * rem;
+activeText.animate({
+  scrollTop: activeText.find('[data-note-number="' + noteNumber + '"]').offset().top - activeText.offset().top + activeText.scrollTop() - scrollTopOffset
+}, 500);
+
   });
+
+
+// Next text container switch
+
+$('.next-link').on('click', function () {
+  // get the current active text container
+  const currentContainer = $('.text-container.active');
+  // get the next text container
+  const nextContainer = currentContainer.next('.text-container');
+  // if there is a next text container
+  if (nextContainer.length) {
+    // get the text data attribute of the next text container
+    const text = nextContainer.data('text');
+    // hide all text containers
+    $('.text-container').removeClass('active');
+    // show the selected text container
+    $(`.text-container[data-text=${text}]`).addClass('active');
+    // reset all scrolls
+    nextContainer.scrollTop(0);
+    // close any previously opened .sublinks-container
+    $('.nav-click-wrapper .sublinks-container').css('max-height', 0);
+    // open the corresponding month's nav-click-wrapper
+    $(`.nav-click[data-text=${text}]`).closest('.nav-click-wrapper').find('.nav-click').click();
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
 });
 
 $(document).ready(function () {

@@ -48,20 +48,20 @@ a {
 
 .mid {
   font-family: 'Sitka Small';
-  font-size: 1.6em;
-  line-height: 1.7em;
+  font-size: 1.6rem;
+  line-height: 1.7rem;
 }
 
 .big {
   font-family: 'Sitka Text';
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 400;
 }
 
 .bigger {
   font-family: 'Sitka Heading';
   font-weight: normal;
-  font-size: 4em;
+  font-size: 4rem;
 }
 
 #side-container {
@@ -175,9 +175,8 @@ a {
 .text-container {
   position: absolute;
   height: 100vh;
-  padding: 0 8vw 0 1rem;
-  overflow: scroll;
-  scrollbar-width: none;
+  padding: 0 8vw 0 2.5rem;
+  overflow-y: scroll;
   background-color: white;
   top: 0;
   left: 0;
@@ -188,18 +187,33 @@ a {
   transition: opacity 0.1s ease-in-out;
 }
 
+.text-container::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.text-container::-webkit-scrollbar-thumb {
+  background-color: var(--black);
+}
+
+.text-container:first-child{
+  padding: 0;
+  overflow: hidden;
+}
+
 .text-container.active {
   z-index: 2;
   opacity: 1;
   transition: opacity 0.1s ease-in-out;
 }
 
-.text-container::-webkit-scrollbar {
-  display: none;
+.month-title,
+.chapter-title {
+  margin-top: 1rem;
 }
 
-.month-title {
-  display: none;
+.next-link {
+  text-align: right;
+  margin-bottom: 1rem;
 }
 
 /* alternating layout */
