@@ -13,6 +13,11 @@
 }
 
 @font-face {
+  font-family: 'Vera Mono';
+  src: url("fonts/VeraMono.ttf") format('truetype'),
+}
+
+@font-face {
   font-family: 'Sitka Small';
   src: url("fonts/SitkaSmall.ttf") format('truetype'),
 }
@@ -232,7 +237,7 @@ a {
 
 .gpt {
   padding: .6em 0em .8em 3rem;
-  font-family: monospace;
+  font-family: Vera Mono;
   font-size: 1.6rem;
   line-height: 2.1rem;
 }
