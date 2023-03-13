@@ -220,12 +220,6 @@ a {
   margin-top: 1rem;
 }
 
-.next-link {
-  text-align: right;
-  margin-bottom: 1rem;
-  cursor: pointer;
-}
-
 /* alternating layout */
 
 .note-holder:nth-child(odd) {
@@ -240,6 +234,14 @@ a {
   padding: .8em 0em .8em 0em;
 }
 
+
+
+.next-link {
+  text-align: right;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
 .gpt {
   padding: 0.2em 0em 1.8em 3rem;
   font-family: 'Lucida Console';
@@ -251,6 +253,12 @@ a {
 .text-container a img {
   display: none;
 }
+
+
+.three-box {
+  height: 10rem;
+}
+
 
 .tooltip {
   position: absolute;

@@ -11,7 +11,7 @@ camera.position.x = -.2;
 
 
 // Get the container element
-var container = document.querySelector('.text-container');
+var container = document.querySelector('.text-container[data-text="homepage"]');
 
 // Set up the renderer
 var renderer = new THREE.WebGLRenderer({
@@ -118,8 +118,8 @@ var animate = function () {
     if (container.classList.contains('active')) {
         requestAnimationFrame(animate);
         // Rotate the scene by a small amount on each frame.
-        teapot.rotation.y += 0.02;
-        teapot.rotation.z += 0.02;
+        teapot.rotation.y += 0.017;
+        teapot.rotation.z += 0.017;
         renderer.render(scene, camera);
     }
 };
