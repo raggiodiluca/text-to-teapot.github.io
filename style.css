@@ -16,8 +16,8 @@
 @font-face {
   font-family: 'Lucida Console';
   src: url('fonts/LucidaConsole.woff2') format('woff2'),
-      url('fonts/LucidaConsole.woff') format('woff'),
-      url('fonts/LucidaConsole.ttf') format('truetype');
+    url('fonts/LucidaConsole.woff') format('woff'),
+    url('fonts/LucidaConsole.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -68,11 +68,12 @@ a {
   color: var(--black);
 }
 
-.small, body {
+.small,
+body {
   font-family: 'Sitka Small';
   font-size: 1rem;
   line-height: 1.2em;
-} 
+}
 
 /* .small, body {
   font-family: 'Lucida Console';
@@ -128,7 +129,7 @@ a {
   width: 100%;
   line-height: 1em;
   padding: 0 1rem 1rem 1rem;
-  
+
 }
 
 #subtitle {
@@ -232,7 +233,7 @@ a {
   background-color: var(--black);
 }
 
-.text-container:first-child{
+.text-container:first-child {
   padding: 0;
   overflow: hidden;
 }
@@ -280,13 +281,16 @@ a {
 }
 
 
-#three-face,
-#three-bike1 {
+.three-box {
   height: 10rem;
 }
 
+#three-chair.three-box {
+  height: 15rem !important;
+}
+
 .text-container[data-text="bibliografia"] a {
-    background-color: var(--green);
+  background-color: var(--green);
   mix-blend-mode: multiply;
 }
 
@@ -299,7 +303,7 @@ a {
 .tooltip {
   position: absolute;
   z-index: 99;
-  border: 2px solid var(--black); 
+  border: 2px solid var(--black);
   background-color: var(--gray);
   font-size: 1rem;
   line-height: 1.1rem;
@@ -314,12 +318,13 @@ a {
   transition: opacity 0.2s ease-in-out;
   position: absolute;
   pointer-events: none;
-  
+
 }
 
 .tooltip .tooltip-image {
   display: flex;
 }
+
 .tooltip img {
   display: block;
   width: 100%;
