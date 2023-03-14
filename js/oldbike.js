@@ -9,7 +9,7 @@ camera.position.z = 2.6;
 camera.position.y = 0.5;
 
 // Get the container element
-var container = document.querySelector('.three-box.bike1');
+var container = document.querySelector('#three-bike1');
 
 // Set up the renderer
 var renderer = new THREE.WebGLRenderer({
@@ -75,11 +75,10 @@ handlebar.add( handlebarGripMesh );
 
 handlebar.position.set( 0, 0.5, 0.8 );
 bike.add( handlebar );
-
 scene.add( bike );
 
 
-var container = document.querySelector('.three-box');
+var container = document.querySelector('#three-bike1');
 var textContainer = container.closest('.text-container');
 var isActive = textContainer.classList.contains('active');
 

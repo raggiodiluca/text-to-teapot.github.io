@@ -14,9 +14,9 @@
 
 @font-face {
   font-family: 'Sitka Text';
-  src: url('SitkaText.woff2') format('woff2'),
-      url('SitkaText.woff') format('woff'),
-      url('SitkaText.ttf') format('truetype');
+  src: url('fonts/SitkaText.woff2') format('woff2'),
+      url('fonts/SitkaText.woff') format('woff'),
+      url('fonts/SitkaText.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -24,9 +24,9 @@
 
 @font-face {
   font-family: 'Lucida Console';
-  src: url('LucidaConsole.woff2') format('woff2'),
-      url('LucidaConsole.woff') format('woff'),
-      url('LucidaConsole.ttf') format('truetype');
+  src: url('fonts/LucidaConsole.woff2') format('woff2'),
+      url('fonts/LucidaConsole.woff') format('woff'),
+      url('fonts/LucidaConsole.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -34,9 +34,9 @@
 
 @font-face {
   font-family: 'Sitka Small';
-  src: url('SitkaSmall.woff2') format('woff2'),
-      url('SitkaSmall.woff') format('woff'),
-      url('SitkaSmall.ttf') format('truetype');
+  src: url('fonts/SitkaSmall.woff2') format('woff2'),
+      url('fonts/SitkaSmall.woff') format('woff'),
+      url('fonts/SitkaSmall.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -44,9 +44,9 @@
 
 @font-face {
   font-family: 'Sitka Heading';
-  src: url('SitkaHeading.woff2') format('woff2'),
-      url('SitkaHeading.woff') format('woff'),
-      url('SitkaHeading.ttf') format('truetype');
+  src: url('fonts/SitkaHeading.woff2') format('woff2'),
+      url('fonts/SitkaHeading.woff') format('woff'),
+      url('fonts/SitkaHeading.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -54,9 +54,9 @@
 
 @font-face {
   font-family: 'Sitka Text';
-  src: url('SitkaText-Italic.woff2') format('woff2'),
-      url('SitkaText-Italic.woff') format('woff'),
-      url('SitkaText-Italic.ttf') format('truetype');
+  src: url('fonts/SitkaText-Italic.woff2') format('woff2'),
+      url('fonts/SitkaText-Italic.woff') format('woff'),
+      url('fonts/SitkaText-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -286,7 +286,8 @@ a {
 }
 
 
-.three-box {
+#three-face,
+#three-bike1 {
   height: 10rem;
 }
 
