@@ -290,6 +290,16 @@ a {
   height: 10rem;
 }
 
+.text-container[data-text="bibliografia"] a {
+    background-color: var(--green);
+  mix-blend-mode: multiply;
+}
+
+.text-container[data-text="bibliografia"] i {
+  font-style: italic;
+  font-family: 'Sitka Text';
+}
+
 
 .tooltip {
   position: absolute;
