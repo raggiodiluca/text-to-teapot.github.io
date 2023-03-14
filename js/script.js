@@ -140,3 +140,29 @@ $(document).ready(function () {
 
 
 });
+
+
+// Audio player
+
+$(document).ready(function () {
+  var audio = null; // keep track of the currently playing audio element
+
+  $('.audio').on('click', function () {
+    var audioFile = $(this).data('audio-file');
+    var newAudio = new Audio(audioFile);
+
+    // stop any previously playing audio
+    if (audio !== null) {
+      audio.pause();
+    }
+
+    // set the new audio as the currently playing audio
+    audio = newAudio;
+
+    // play the new audio after a delay of 1 second
+    setTimeout(function () {
+      newAudio.play();
+    }, 1000);
+  });
+
+});

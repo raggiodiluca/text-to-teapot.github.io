@@ -275,6 +275,10 @@ body {
   line-height: 2rem;
 }
 
+.audio {
+  cursor: pointer;
+}
+
 
 .text-container a img {
   display: none;
