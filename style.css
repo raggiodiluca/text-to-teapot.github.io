@@ -12,15 +12,6 @@
   /*lighter gray #F7F7F8, darker gray #E9E9EE*/
 }
 
-@font-face {
-  font-family: 'Sitka Text';
-  src: url('fonts/SitkaText.woff2') format('woff2'),
-      url('fonts/SitkaText.woff') format('woff'),
-      url('fonts/SitkaText.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
 @font-face {
   font-family: 'Lucida Console';
@@ -34,33 +25,36 @@
 
 @font-face {
   font-family: 'Sitka Small';
-  src: url('fonts/SitkaSmall.woff2') format('woff2'),
-      url('fonts/SitkaSmall.woff') format('woff'),
-      url('fonts/SitkaSmall.ttf') format('truetype');
-  font-weight: normal;
+  src: url('fonts/SitkaVF.ttf') format('truetype-variable');
+  font-weight: 400 900;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sitka Heading';
-  src: url('fonts/SitkaHeading.woff2') format('woff2'),
-      url('fonts/SitkaHeading.woff') format('woff'),
-      url('fonts/SitkaHeading.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+  font-named-instance: 'Sitka Small';
 }
 
 @font-face {
   font-family: 'Sitka Text';
-  src: url('fonts/SitkaText-Italic.woff2') format('woff2'),
-      url('fonts/SitkaText-Italic.woff') format('woff'),
-      url('fonts/SitkaText-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
+  src: url('fonts/SitkaVF.ttf') format('truetype-variable');
+  font-weight: 400 900;
+  font-style: normal;
+  font-named-instance: 'Sitka Text';
 }
+
+@font-face {
+  font-family: 'Sitka Heading';
+  src: url('fonts/SitkaVF.ttf') format('truetype-variable');
+  font-weight: 400 900;
+  font-style: normal;
+  font-named-instance: 'Sitka Heading';
+}
+
+@font-face {
+  font-family: 'Sitka Text Italic';
+  src: url('fonts/SitkaVF-Italic.ttf') format('truetype-variable');
+  font-weight: 400 900;
+  font-style: italic;
+  font-named-instance: 'Sitka Text Italic';
+}
+
 
 body {
   margin: 0;
