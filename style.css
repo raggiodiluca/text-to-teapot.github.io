@@ -13,24 +13,53 @@
 }
 
 @font-face {
-  font-family: 'Sitka Small';
-  src: url("fonts/SitkaSmall.ttf") format('truetype');
+  font-family: 'Sitka Text';
+  src: url('SitkaText.woff2') format('woff2'),
+      url('SitkaText.woff') format('woff'),
+      url('SitkaText.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Sitka Text';
-  src: url("fonts/SitkaText.ttf") format('truetype');
+  font-family: 'Lucida Console';
+  src: url('LucidaConsole.woff2') format('woff2'),
+      url('LucidaConsole.woff') format('woff'),
+      url('LucidaConsole.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sitka Small';
+  src: url('SitkaSmall.woff2') format('woff2'),
+      url('SitkaSmall.woff') format('woff'),
+      url('SitkaSmall.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Sitka Heading';
-  src: url("fonts/SitkaHeading.ttf") format('truetype');
+  src: url('SitkaHeading.woff2') format('woff2'),
+      url('SitkaHeading.woff') format('woff'),
+      url('SitkaHeading.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sitka Text';
+  src: url('SitkaText-Italic.woff2') format('woff2'),
+      url('SitkaText-Italic.woff') format('woff'),
+      url('SitkaText-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 body {
@@ -56,6 +85,11 @@ a {
   font-size: 1rem;
   line-height: 1.2em;
 }  */
+
+.italic {
+  font-family: 'Sitka Text';
+  font-style: italic;
+}
 
 .mid {
   font-family: 'Sitka Small';
@@ -222,16 +256,13 @@ a {
 
 /* alternating layout */
 
-.note-holder:nth-child(odd) {
-  padding-left: 3rem;
-}
-
 .note-title {
-  margin-top: .8em;
+  padding-left: 3rem;
+  margin-top: 1rem;
 }
 
 .note-text {
-  padding: .8em 0em .8em 0em;
+  padding: .5rem 0em .8rem 0em;
 }
 
 
