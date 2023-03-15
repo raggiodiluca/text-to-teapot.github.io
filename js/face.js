@@ -66,7 +66,7 @@ var animate = function () {
     if (isActive) {
         requestAnimationFrame(animate);
         // Rotate the bike based on the current rotation values
-        mesh.rotation.y += 0.017;
+        mesh.rotation.y += 0.03;
 
         renderer.render(scene, camera);
     }
