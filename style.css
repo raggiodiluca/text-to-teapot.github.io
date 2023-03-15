@@ -17,7 +17,8 @@
   font-family: 'Lucida Console';
   src: url('fonts/LucidaConsole.woff2') format('woff2'),
     url('fonts/LucidaConsole.woff') format('woff'),
-    url('fonts/LucidaConsole.ttf') format('truetype');
+    url('fonts/LucidaConsole.ttf') format('truetype'),
+    url('fonts/LucidaConsole.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -25,34 +26,46 @@
 
 @font-face {
   font-family: 'Sitka Small';
-  src: url('fonts/SitkaVF.ttf') format('truetype-variable');
-  font-weight: 400 900;
+  src: url('fonts/Sitka-Small.woff2') format('woff2'),
+    url('fonts/Sitka-Small.woff') format('woff'),
+    url('fonts/Sitka-Small.ttf') format('truetype'),
+    url('fonts/Sitka-Small.otf') format('opentype');
+  font-weight: normal;
   font-style: normal;
-  font-named-instance: 'Sitka Small';
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Sitka Text';
-  src: url('fonts/SitkaVF.ttf') format('truetype-variable');
-  font-weight: 400 900;
+  src: url('fonts/Sitka-Text.woff2') format('woff2'),
+    url('fonts/Sitka-Text.woff') format('woff'),
+    url('fonts/Sitka-Text.ttf') format('truetype'),
+    url('fonts/Sitka-Text.otf') format('opentype');
+  font-weight: normal;
   font-style: normal;
-  font-named-instance: 'Sitka Text';
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Sitka Heading';
-  src: url('fonts/SitkaVF.ttf') format('truetype-variable');
-  font-weight: 400 900;
+  src: url('fonts/Sitka-Heading.woff2') format('woff2'),
+    url('fonts/Sitka-Heading.woff') format('woff'),
+    url('fonts/Sitka-Heading.ttf') format('truetype'),
+    url('fonts/Sitka-Heading.otf') format('opentype');
+  font-weight: normal;
   font-style: normal;
-  font-named-instance: 'Sitka Heading';
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Sitka Text Italic';
-  src: url('fonts/SitkaVF-Italic.ttf') format('truetype-variable');
-  font-weight: 400 900;
+  font-family: 'Sitka Text';
+  src: url('fonts/SitkaVF-Italic-Text.woff2') format('woff2'),
+    url('fonts/SitkaVF-Italic-Text.woff') format('woff'),
+    url('fonts/SitkaVF-Italic-Text.ttf') format('truetype'),
+    url('fonts/SitkaVF-Italic-Text.otf') format('opentype');
+  font-weight: normal;
   font-style: italic;
-  font-named-instance: 'Sitka Text Italic';
+  font-display: swap;
 }
 
 
